@@ -6,7 +6,7 @@ export function buildLoaders(): webpack.RuleSetRule[] {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
-    };
+    }
 
     return [
         typescriptLoader,
