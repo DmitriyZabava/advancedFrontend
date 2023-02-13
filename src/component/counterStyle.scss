@@ -1,0 +1,15 @@
+.counter {
+  padding: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: grey;
+  border-radius: 0.75rem;
+}
+
+.counter_button {
+  padding: 10px;
+  color: orange;
+  background: blue;
+  border-radius: 0.25rem;
+}
