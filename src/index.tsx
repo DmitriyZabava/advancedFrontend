@@ -1,16 +1,13 @@
 import {render} from "react-dom";
 
+import App from "./App";
+import {BrowserRouter} from "react-router-dom";
 
-import {someFn} from "./test";
-import Counter from "./component/counter";
-
-
-const testFunc = someFn(24)
 
 render(
-    <div>
-        {testFunc}
-        <Counter/>
-    </div>,
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
+    ,
     document.getElementById("root")
 )
