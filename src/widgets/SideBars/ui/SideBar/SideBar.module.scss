@@ -6,14 +6,20 @@
   transition: 0.3s;
 }
 
-.collapsed{
+.collapsed {
   width: var(--sidebar-width-collapsed);
 }
 
-.switchers{
+.switchers {
   position: absolute;
   bottom: 16px;
   display: flex;
   justify-content: center;
   width: 100%;
+
+}
+
+
+.lang {
+  margin-left: 8px;
 }
