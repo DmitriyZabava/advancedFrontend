@@ -1,4 +1,4 @@
-import {BuildOptions} from "./build/types/config";
+import {BuildOptions} from "./types/config";
 import type {Configuration as DevServerConfiguration} from "webpack-dev-server"
 
 export function buildDevServer(options: BuildOptions): DevServerConfiguration {
@@ -13,5 +13,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         client: {
             progress: true,
         },
+        hot: true
     }
 }

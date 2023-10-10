@@ -28,12 +28,14 @@ export const SideBar = ({className}: SideBarProps) => {
         <div className={classNames(cls.SideBar, {[cls.collapsed]: collapsed}, [className])}>
 
             <Button
-
                 theme={ThemeButton.CLEAR}
                 onClick={onToggle}>
                 {theme === Theme.DARK ? <ExpandIconDark/> : <ExpandIconLight/>}
             </Button>
-            <div className={cls.switchers}>
+
+            <div
+                className={cls.switchers}
+            >
                 <ThemeSwitcher/>
                 <LangSwitcher className={cls.lang}/>
             </div>
