@@ -1,11 +1,11 @@
-import {useState} from "react";
+import { useState } from "react";
 
-import {classNames} from "shared/lib/classNames/classNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./SideBar.module.scss"
-import {ThemeSwitcher} from "features/ThemeSwitcher";
-import {LangSwitcher} from "features/LangSwitcher";
-import {Button, ThemeButton} from "shared/ui/Button/Button";
-import {Theme, useTheme} from "app/providers/ThemeProvider";
+import { ThemeSwitcher } from "features/ThemeSwitcher";
+import { LangSwitcher } from "features/LangSwitcher";
+import { Button, ThemeButton } from "shared/ui/Button/Button";
+import { Theme, useTheme } from "app/providers/ThemeProvider";
 
 import ExpandIconDark from "../../../../shared/assets/icons/expand-dark.svg"
 import ExpandIconLight from "../../../../shared/assets/icons/expand-light.svg"
@@ -16,8 +16,8 @@ interface SideBarProps {
 }
 
 
-export const SideBar = ({className}: SideBarProps) => {
-    const {theme} = useTheme()
+export const SideBar = ({ className }: SideBarProps) => {
+    const { theme } = useTheme()
     const [collapsed, setCollapsed] = useState(false)
 
     const onToggle = () => {
@@ -25,7 +25,7 @@ export const SideBar = ({className}: SideBarProps) => {
     }
 
     return (
-        <div className={classNames(cls.SideBar, {[cls.collapsed]: collapsed}, [className])}>
+        <div className={classNames(cls.SideBar, { [cls.collapsed]: collapsed }, [className])}>
 
             <Button
                 theme={ThemeButton.CLEAR}
