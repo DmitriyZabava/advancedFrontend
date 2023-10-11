@@ -5,22 +5,22 @@
 
 
 .app {
-  font: var(--font-m);
-  background: var(--bg-color);
-  color: var(--primary-color);
-  min-height: 100vh;
-  max-width: 1536px;
-  margin: 0 auto;
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    max-width: 1536px;
+    margin: 0 auto;
 }
 
 
 .content-page {
-  display: flex;
+    display: flex;
 }
 
 
 .page-wrapper {
-  flex-grow: 1;
-  padding: 16px;
+    flex-grow: 1;
+    padding: 16px;
 }
 

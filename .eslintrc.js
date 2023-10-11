@@ -6,7 +6,8 @@ module.exports = {
     extends: [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:i18next/recommended"
     ],
     overrides: [
         {
@@ -28,7 +29,8 @@ module.exports = {
     },
     plugins: [
         "@typescript-eslint",
-        "react"
+        "react",
+        "i18next"
     ],
     root: true,
     rules: {
@@ -48,7 +50,8 @@ module.exports = {
         "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle": "off",
         "react/no-deprecated": "off",
-        "object-curly-spacing": ["error", "always"]
+        "object-curly-spacing": ["error", "always"],
+        "i18next/no-literal-string": ["error", { "markupOnly": true }]
     },
     globals: {
         __IS_DEV__: true,
