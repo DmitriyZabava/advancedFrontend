@@ -16,7 +16,7 @@ function App() {
                 <NavBar/>
                 <div className="content-page">
                     <SideBar/>
-                    <AppRouter/>S
+                    <AppRouter/>
                 </div>
             </Suspense>
 

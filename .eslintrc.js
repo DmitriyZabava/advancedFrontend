@@ -57,7 +57,11 @@ module.exports = {
         "react/no-deprecated": "off",
         "object-curly-spacing": ["error", "always"],
         "i18next/no-literal-string": ["error", { "markupOnly": true }],
-        "max-len": ["error", { "ignoreComments": true }]
+        "max-len": ["error",
+            {
+                "code": 95,
+                "ignoreComments": true
+            }]
     },
     globals: {
         __IS_DEV__: true,
