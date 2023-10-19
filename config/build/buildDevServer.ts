@@ -11,6 +11,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfig {
             },
         },
         client: {
+            overlay: false,
             progress: true,
         },
         hot: true
