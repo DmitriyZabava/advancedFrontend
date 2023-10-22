@@ -16,8 +16,12 @@ module.exports = {
                 "node": true
             },
             files: [
+                "**/src/**/*.test.{ts,tsx}",
                 ".eslintrc.{js,cjs}"
             ],
+            rules: {
+                "i18next/no-literal-string": "off"
+            },
             "parserOptions": {
                 "sourceType": "script"
             }
@@ -56,10 +60,15 @@ module.exports = {
         "no-underscore-dangle": "off",
         "react/no-deprecated": "off",
         "object-curly-spacing": ["error", "always"],
-        "i18next/no-literal-string": ["error", { "markupOnly": true }],
+        "i18next/no-literal-string": [
+            "error",
+            {
+                "markupOnly": true,
+                "ignoreAttribute": ["data-testid"]
+            }],
         "max-len": ["error", { "code": 100, "ignoreComments": true }]
     },
     globals: {
         __IS_DEV__: true,
-    },
+    }
 };

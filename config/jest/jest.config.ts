@@ -3,7 +3,10 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from "path";
+
 export default {
+    setupFilesAfterEnv: ["<rootDir>/config/jest/setupTest.ts"],
 
     // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
@@ -21,6 +24,13 @@ export default {
         "node_modules"
     ],
 
+    // The root directory that Jest should scan for tests and modules within
+    rootDir: "../../",
+
+    modulePaths: [
+        "<rootDir>src"
+    ],
+
     // An array of file extensions your modules use
     moduleFileExtensions: [
         "js",
@@ -30,6 +40,11 @@ export default {
         "json",
         "node"
     ],
+    //'\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    moduleNameMapper: {
+        "\\.s?css$": "identity-obj-proxy",
+        "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx")
+    },
 
     // The glob patterns Jest uses to detect test files
     // "**/__tests__/**/*.[jt]s?(x)",
@@ -37,9 +52,8 @@ export default {
     testMatch: [
         "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
     ],
-    // The root directory that Jest should scan for tests and modules within
-    rootDir: "../../",
-  
+
+
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -50,7 +64,6 @@ export default {
     // cacheDirectory: "C:\\Users\\Dmitri Zabava\\AppData\\Local\\Temp\\jest",
 
 
-
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -59,7 +72,6 @@ export default {
 
     // The directory where Jest should output its coverage files
     // coverageDirectory: undefined,
-
 
 
     // Indicates which provider should be used to instrument code for coverage
@@ -98,7 +110,6 @@ export default {
     // maxWorkers: "50%",
 
 
-
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     // moduleNameMapper: {},
 
@@ -133,7 +144,6 @@ export default {
     // restoreMocks: false,
 
 
-
     // A list of paths to directories that Jest should use to search for files in
     // roots: [
     //   "<rootDir>"
@@ -155,13 +165,11 @@ export default {
     // snapshotSerializers: [],
 
 
-
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
 
     // Adds a location field to test results
     // testLocationInResults: false,
-
 
 
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
