@@ -7,7 +7,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfig {
         historyApiFallback: true,
         open: {
             app: {
-                name: 'Chrome',
+                name: "Chrome",
             },
         },
         client: {
