@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { classNames } from "shared/lib/classNames/classNames";
-import cls from "SideBar.module.scss"
+import cls from "./SideBar.module.scss"
 import { ThemeSwitcher } from "features/ThemeSwitcher";
 import { LangSwitcher } from "features/LangSwitcher";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
