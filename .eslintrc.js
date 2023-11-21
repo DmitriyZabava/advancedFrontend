@@ -42,6 +42,7 @@ module.exports = {
     rules: {
         quotes: ["error", "double"],
         indent: [2, 4],
+        "@typescript-eslint/no-var-requires": 0,
         "react/jsx-indent": [2, 4],
         "react/jsx-indent-props": [2, 4],
 
@@ -68,7 +69,7 @@ module.exports = {
             "error",
             {
                 "markupOnly": true,
-                "ignoreAttribute": ["data-testid", "to", "alt"]
+                "ignoreAttribute": ["data-testid", "to", "alt", " ", "short"]
             }],
         "max-len": ["error", { "code": 100, "ignoreComments": true }]
     },
