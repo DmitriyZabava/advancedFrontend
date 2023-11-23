@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import "./styles/index.scss"
 
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
@@ -9,19 +8,20 @@ import { SideBar } from "widgets/SideBars";
 import { Loader } from "shared/ui/Loader";
 
 
+
 function App() {
     const { theme } = useTheme()
+
     return (
         <div className={classNames("app", {}, [theme])}>
             <Suspense fallback={<Loader/>}>
                 <NavBar/>
+
                 <div className="content-page">
                     <SideBar/>
                     <AppRouter/>
                 </div>
             </Suspense>
-
-
         </div>
     );
 }

@@ -4,7 +4,9 @@ import { JSX } from "react";
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) : JSX.Element => {
     return(
-        <ThemeProvider>
+        <ThemeProvider
+            initialTheme={theme}
+        >
             <div className={`app ${theme}`}>
                 <StoryComponent/>
             </div>
